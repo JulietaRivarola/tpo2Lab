@@ -1,0 +1,37 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-bg-color: #693699;
+    --secondary-bg-color: #7C40A9;
+    --third-bg-color: #9570DD;
+}
+
+.main-bg {
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.secondary-bg {
+    background: var(--secondary-bg-color);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.big {
+    font-size: 4rem;
+}
+
+.huge {
+    font-size: 6rem;
+}
+
+.separator {
+    background-color: var(--third-bg-color);
+}

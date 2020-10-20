@@ -4,12 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/custom.css">
+    <link rel="stylesheet" href="./styles/weather-icons.min.css">
     <title>TPO2</title>
 </head>
-<body>
-    <div class="container mt-2">
-        <div class="jumbotron">
-            <h1 class="text-center">TPO2</h1>
+<body class="main-bg">
+    <div class="container secondary-bg p-4 text-white rounded shadow">
+        <h3 class="text-center bold">Neuquén, Neuquén Capital</h3>
+        <hr class="separator w-50">
+        <div class="row">
+            <div class="col-12 col-sm-4 secondary-bg text-center">
+                <h1 class="title big">
+                    <em class="wi wi-day-cloudy"></em>
+                </h1>
+                <h4>
+                    Parcialmente Nublado
+                </h4>
+            </div>
+            <div class="col-12 col-sm-4 d-flex align-items-center justify-content-center">
+                <h1 class="text-center huge">
+                    21.0 °C
+                </h1>
+            </div>
+            <div class="col-12 col-sm-4 d-flex justify-content-center flex-column">
+                <p>
+                    <em class="wi wi-windy"></em>&nbsp;Viento: 16 km/h
+                </p>
+                <p>
+                    <em class="wi wi-raindrop"></em>&nbsp;Precipitaciones: 0.00 mm
+                </p>
+                <p>
+                    <em class="wi wi-barometer"></em>&nbsp;Presion Atmosferica: 1025.0 mb
+                </p>
+            </div>
         </div>
     </div>
 </body>
