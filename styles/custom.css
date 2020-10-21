@@ -46,3 +46,9 @@ html {
 .justify-content-evenly {
     justify-content: space-evenly;
 }
+
+@media (max-width: 991px) {
+    .border-right{
+        border-right: 0px !important;
+    }
+}
