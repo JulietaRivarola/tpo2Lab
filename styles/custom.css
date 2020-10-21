@@ -11,9 +11,13 @@ html {
 
 .main-bg {
     background-color: var(--main-bg-color);
+    height: 100vh;
+}
+
+.center {
     display: flex;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
 }
 
 .secondary-bg {
