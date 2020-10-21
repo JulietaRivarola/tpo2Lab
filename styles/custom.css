@@ -11,6 +11,9 @@ html {
 
 .main-bg {
     background-color: var(--main-bg-color);
+}
+
+.full-height {
     height: 100vh;
 }
 
@@ -38,4 +41,8 @@ html {
 
 .separator {
     background-color: var(--third-bg-color);
+}
+
+.custom-thead > tr > th{
+    border: none;
 }
