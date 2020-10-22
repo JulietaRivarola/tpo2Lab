@@ -31,6 +31,10 @@ html {
     font-weight: bold;
 }
 
+.middle {
+    font-size: 2rem;
+}
+
 .big {
     font-size: 4rem;
 }
@@ -51,4 +55,25 @@ html {
     .border-right{
         border-right: 0px !important;
     }
+}
+
+/*mostrar ocultar*/
+
+#boton-up-1{
+    display: none;
+}
+#boton-arrow-1{
+    display: flex;
+}
+
+#d1{
+    display: none; 
+    transition: height .6s;
+}
+
+#boton-up-2{
+    display: none;
+}
+#boton-arrow-2{
+    display: flex;
 }
