@@ -1,10 +1,12 @@
-let click = true;
-
+/**
+ * Muestra la informacion de un dia en particular
+ */
 function mostrar(){
 	let up = this.childNodes[1];
 	let down = this.childNodes[3];
 	let info = document.querySelector(`#${this.getAttribute('dia')}`);
-	if(click) {
+
+	if(!verificarEstaMostrando(info)) {
 		info.classList.remove('d-none');
 		info.classList.add('d-block');
 
@@ -13,8 +15,6 @@ function mostrar(){
 
 		down.classList.remove('d-none');
 		down.classList.add('d-block');
-
-		click = false;
 	} else {
 		info.classList.remove('d-block');
 		info.classList.add('d-none');
@@ -24,9 +24,15 @@ function mostrar(){
 
 		down.classList.remove('d-block');
 		down.classList.add('d-none');
-
-		click = true;
    }   
+}
+
+/**
+ * Verifica si ya se esta mostrando la informacion
+ * @param {HTMLElement} element 
+ */
+function verificarEstaMostrando(element){
+	return element.classList.contains('d-block');
 }
 
 document.querySelectorAll('.fila-dia').forEach(fila =>{
