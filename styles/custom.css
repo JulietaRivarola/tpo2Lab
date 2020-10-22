@@ -27,6 +27,10 @@ html {
     background: var(--secondary-bg-color);
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -59,21 +63,9 @@ html {
 
 /*mostrar ocultar*/
 
-#boton-up-1{
+#up{
     display: none;
 }
-#boton-arrow-1{
-    display: flex;
-}
-
-#d1{
-    display: none; 
-    transition: height .6s;
-}
-
-#boton-up-2{
-    display: none;
-}
-#boton-arrow-2{
-    display: flex;
+#down{
+    display: block;
 }

@@ -37,52 +37,44 @@
         <h2>Neuquén, Provincia de Neuquén</h2>
 
         <!----------------Filas de dias---------------------- -->
-
 	    <div class="center mt-3">
 		    <div class="container">
 		         <div class="row justify-content-lg-center ">   
-
 		         	<!-------------------Fila Dia 1 ------------------------>
 		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
 		         		<div class="row justify-content-between">
-		         			
-		         			<div class="col-sm col-md-auto col-lg-auto ">
+		         			<div class="col-auto ml-2 d-sm-none d-md-block">
 		         				<p>mie. 21</p>
 		         			</div>
-		         			
 		         			<div class="col-sm col-md-auto col-lg-auto ">
 		         				<p><strong>22°</strong>/ 9°</p>
 		         			</div>
-
 		         			<div class="col-sm col-md-2 col-lg-3 ">
 		         				<p><span class="wi wi-day-cloudy"></span> Mayormente nublado</p>
 		         			</div>
-		         	
 			         		<div class="col-sm col-md-auto col-lg-auto ">
 			         			<p><span class="wi wi-raindrop"></span> 10%</p>
 			         		</div>
-		         			
 			         		<div class="col-sm col-md-2 col-lg-3 ">
 			         			<p><span class="wi wi-strong-wind"></span> OSO 26 km/h </p>
 			         		</div>
 			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia" dia = "d1" ba="boton-arrow-1" bu="boton-up-1">
-				         			<div  id="boton-arrow-1">
+			         			<div class="fila-dia" dia="d1" ba="boton-arrow-1" bu="boton-up-1">
+				         			<div id="down" class="pointer">
 				         				<img src="./font/arrow-white.png" width="30" height="30" >
 				         			</div>
-				         			<div id="boton-up-1" >
+				         			<div id="up" class="pointer">
 				         				<img mg src="./font/up-white.png" width="30" height="30" >
 				         			</div>
 				         		</div>
 			         		</div>
-			         		
 		         		</div>
 		         	</div>
 		         	<!--------------------Fin Fila Dia 1-------------------------->
 		         	
 
 		         	<!----------------------Cards Dia 1-------------------------->
-		         	<div id="d1">
+		         	<div id="d1" class="d-none">
 						<div class="row justify-content-center">
 							<!--------------------Card para Dia----------------------->
 							<div class=" col-6">
@@ -102,9 +94,7 @@
 												</div>
 											</div>
 											<p class="card-text">Cielo parcialmente cubierto. Máxima de 22 C. Vientos del ENE de 15 a 30 km/h.</p>
-
 											<div class="d-flex">
-												
 												<div class="card-body main-bg rounded shadow">
 													<div class="row">
 														<div class="col-6">
@@ -156,10 +146,10 @@
 									</div>
 								</div>
 							</div>
-			<!--------------------Fin Card para Dia-------------------------->
+							<!--------------------Fin Card para Dia-------------------------->
 
-			<!--------------------Card para Noche-------------------------->
-			<div class="col-6 ">
+							<!--------------------Card para Noche-------------------------->
+							<div class="col-6 ">
 								<div class="secondary-bg rounded shadow">
 									<div class="card-header secondary-bg pb-0 border-0">
 										<p><strong>mié. 21</strong> | Noche</p>
@@ -176,9 +166,7 @@
 												</div>
 											</div>
 											<p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
-
 											<div class="d-flex">
-												
 												<div class="card-body main-bg rounded shadow">
 													<div class="row">
 														<div class="col-6">
@@ -237,14 +225,11 @@
 			<!----------------------Fin Cards Dia 1------------------------->
 
 			<!----------------------Fila Dia 2 ------------------------>
-
 		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
 		         		<div class="row justify-content-between">
-		         			
 		         			<div class="col-sm col-md-auto col-lg-auto ">
 		         				<p>jue. 22</p>
 		         			</div>
-		         			
 		         			<div class="col-sm col-md-auto col-lg-auto ">
 		         				<p><strong>27°</strong>/ 12°</p>
 		         			</div>
@@ -258,24 +243,23 @@
 			         			<p><span class="wi wi-strong-wind"></span> ENE 11 km/h</p>
 			         		</div>
 			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia" dia = "d2" ba="boton-arrow-2" bu="boton-up-2">
-				         			<div  id="boton-arrow-2">
+			         			<div class="fila-dia" dia="d2" ba="boton-arrow-2" bu="boton-up-2">
+				         			<div id="down" class="pointer">
 				         				<img src="./font/arrow-white.png" width="30" height="30" >
 				         			</div>
-				         			<div id="boton-up-2" >
+				         			<div id="up" class="pointer" >
 				         				<img mg src="./font/up-white.png" width="30" height="30" >
 				         			</div>
 				         		</div>
 			         		</div>
 		         		</div>
-		        </div>
-	        </div>
-	    </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!--------------------Fin Fila Dia 2-------------------------->
-
 	<script src="./scripts/header.js"></script>
 	<script src="./scripts/dias-info.js"></script>
-
 </body>
 </html>
