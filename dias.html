@@ -1,1860 +1,1828 @@
+
+
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles/custom.css">
-    <link rel="stylesheet" href="./styles/weather-icons.min.css">
-    <title>TPO2</title>
-</head>
-<body class="main-bg">
-
-	<!---------------------- Menu------------------- -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light main-bg ">
+   <head>
+      <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta name="description" content="Clima por dias en Neuquen Capital">
+	  <meta http-equiv="Content-Language" content="es">
+	  <meta name=”distribution” content=”global”/>
+      <link rel="stylesheet" href="./styles/bootstrap.min.css">
+      <link rel="stylesheet" href="./styles/custom.css">
+      <link rel="stylesheet" href="./styles/weather-icons.min.css">
+      <title>TPO2</title>
+   </head>
+   <body class="main-bg">
+      <!---------------------- Menu------------------- -->
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-light main-bg ">
             <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <!-- imagen logo y texto-->
             <a class="navbar-brand pr-5" href="./">
-                <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
             </a>
             <div class="collapse navbar-collapse" id ="navbarTogglerDemo01">
-            
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item pr-5 ml-2 text-white nav-link" href="index.html">Hoy</a>
-                    <a class="nav-item pr-5 ml-2 text-white nav-link" href="hora.html">Por Hora</a>
-                    <a class="nav-item pr-5 ml-2 text-white nav-link bold" href="dias.html">10 dias</a>
-                </div>
+               <div class="navbar-nav ml-auto">
+                  <a class="nav-item pr-5 ml-2 text-white nav-link" href="index.html">Hoy</a>
+                  <a class="nav-item pr-5 ml-2 text-white nav-link" href="hora.html">Por Hora</a>
+                  <a class="nav-item pr-5 ml-2 text-white nav-link bold" href="dias.html">10 dias</a>
+               </div>
             </div>
-        </nav>
-    </header>
-    <!---------------------Fin Menu--------------------->
-
-    <div class="container-fluid w-75 mt-3 text-white">
-        <h1 class="bold">Neuquén, Argentina</h1>
-        <h4>Tiempo para 10 dias</h4>
-
-        <!----------------Filas de dias---------------------- -->
-	    <div class="center mt-3">
-		    <div class="container">
-		         <div class="row justify-content-lg-center ">   
-		         	<!-------------------Fila Dia 1 ------------------------>
-		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-		         		<div class="row justify-content-between">
-		         			<div class="col-auto ml-2">
-		         				<p>mie. 21</p>
-		         			</div>
-		         			<div class="col-sm col-md-auto col-lg-auto ">
-		         				<p><strong>22°</strong>/ 9°</p>
-		         			</div>
-		         			<div class="col-sm col-md-2 col-lg-3 ">
-		         				<p><span class="wi wi-day-cloudy"></span> Mayormente nublado</p>
-		         			</div>
-			         		<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-			         			<p><span class="wi wi-raindrop"></span> 10%</p>
-			         		</div>
-			         		<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-			         			<p><span class="wi wi-strong-wind"></span> OSO 26 km/h </p>
-			         		</div>
-			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia float-right" dia="d1">
-				         			<div id="down" class="pointer">
-				         				<img src="./font/arrow-white.png" width="30" height="30" >
-				         			</div>
-				         			<div id="up" class="pointer">
-				         				<img mg src="./font/up-white.png" width="30" height="30" >
-				         			</div>
-				         		</div>
-			         		</div>
-		         		</div>
-		         	</div>
-		         	<!--------------------Fin Fila Dia 1-------------------------->
-		         	
-
-		         	<!----------------------Cards Dia 1-------------------------->
-		         	<div id="d1" class="d-none">
-						<div class="row justify-content-center">
-							<!--------------------Card para Dia----------------------->
-							<div class=" col-6">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>mié. 21</strong> | Día</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>22° <span class="wi wi-day-cloudy"></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-													<h6><span class="wi wi-strong-wind"></span> ENE 27 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Máxima de 22 C. Vientos del ENE de 15 a 30 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>39%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 7 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi   wi-sunrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>amanecer <br><strong> 6:36</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-sunset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p> atardecer <br><strong> 7:57</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--------------------Fin Card para Dia-------------------------->
-
-							<!--------------------Card para Noche-------------------------->
-							<div class="col-6 ">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>mié. 21</strong> | Noche</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>9°<span class="wi wi-night-clear "></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 10%</h6>
-													<h6><span class="wi wi-strong-wind"></span> ENE 18 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>68%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 0 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>salida luna<br><strong> 10:21</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>puesta luna<br><strong> 00:48</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-					</div>	
-			<!--------------------Fin Card para Noche-------------------------->
-
-			<!----------------------Fin Cards Dia 1------------------------->
-
-			<!----------------------Fila Dia 2 ------------------------>
-		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-		         		<div class="row justify-content-between">
-		         			<div class="col-auto ml-2">
-		         				<p>jue. 22</p>
-		         			</div>
-		         			<div class="col-sm col-md-auto col-lg-auto ">
-		         				<p><strong>27°</strong>/ 12°</p>
-		         			</div>
-		         			<div class="col-sm col-md-2 col-lg-3 ">
-		         				<p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
-		         			</div>
-			         		<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-			         			<p><span class="wi wi-raindrop"></span> 10%</p>
-			         		</div>
-			         		<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-			         			<p><span class="wi wi-strong-wind"></span> ENE 11 km/h</p>
-			         		</div>
-			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia float-right" dia="d2"">
-				         			<div id="down" class="pointer">
-				         				<img src="./font/arrow-white.png" width="30" height="30" >
-				         			</div>
-				         			<div id="up" class="pointer">
-				         				<img mg src="./font/up-white.png" width="30" height="30" >
-				         			</div>
-				         		</div>
-			         		</div>
-		         		</div>
-		         	</div>
-				
-	<!--------------------Fin Fila Dia 2-------------------------->
-			<!----------------------Cards Dia 2-------------------------->
-		         	<div id="d2" class="d-none">
-						<div class="row justify-content-center">
-							<!--------------------Card para Dia----------------------->
-							<div class=" col-6">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>jue. 22</strong> | Día</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											
-												<div class="row">
-													<div class="col-6">
-														<h1>27° <span class="wi wi-day-cloudy"></span></h1> </div>
-													<div class="col-6">
-														<h6><span class="wi wi-raindrop"> </span> 10%</h6>
-														<h6><span class="wi wi-strong-wind"></span> ENE 11 km/h</h6> </div>
-												</div>
-											
-											<p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>39%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 7 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi   wi-sunrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>amanecer <br><strong> 6:36</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-sunset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p> atardecer <br><strong> 7:57</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--------------------Fin Card para Dia-------------------------->
-
-							<!--------------------Card para Noche-------------------------->
-							<div class="col-6 ">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>mié. 21</strong> | Noche</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>9°<span class="wi wi-night-clear "></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 10%</h6>
-													<h6><span class="wi wi-strong-wind"></span> ENE 18 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>68%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 0 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>salida luna<br><strong> 10:21</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>puesta luna<br><strong> 00:48</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-					</div>	
-			<!--------------------Fin Card para Noche-------------------------->
-
-			<!----------------------Fin Cards Dia 2------------------------->
-			<!----------------------Fila Dia 3 ------------------------>
-		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-		         		<div class="row justify-content-between">
-		         			<div class="col-auto ml-2">
-		         				<p>vie. 23</p>
-		         			</div>
-		         			<div class="col-sm col-md-auto col-lg-auto ">
-		         				<p><strong>32°</strong>/ 15°</p>
-		         			</div>
-		         			<div class="col-sm col-md-2 col-lg-3 ">
-		         				<p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
-		         			</div>
-			         		<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-			         			<p><span class="wi wi-raindrop"></span> 10%</p>
-			         		</div>
-			         		<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-			         			<p><span class="wi wi-strong-wind"></span> NNE 7 km/h</p>
-			         		</div>
-			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia float-right" dia="d3">
-				         			<div id="down" class="pointer">
-				         				<img src="./font/arrow-white.png" width="30" height="30" >
-				         			</div>
-				         			<div id="up" class="pointer">
-				         				<img mg src="./font/up-white.png" width="30" height="30" >
-				         			</div>
-				         		</div>
-			         		</div>
-		         		</div>
-		         	</div>
-				
-	<!--------------------Fin Fila Dia 3-------------------------->
-			<!----------------------Cards Dia 3-------------------------->
-		         	<div id="d3" class="d-none">
-						<div class="row justify-content-center">
-							<!--------------------Card para Dia----------------------->
-							<div class=" col-6">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>vie. 23</strong> | Día</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>32° <span class="wi wi-day-cloudy"></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 10%</h6>
-													<h6><span class="wi wi-strong-wind"></span> NNE 7 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Máxima de 32 C. Vientos del NNE y variable.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>57%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 7 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi   wi-sunrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>amanecer <br><strong> 6:33</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-sunset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p> atardecer <br><strong> 7:59</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--------------------Fin Card para Dia-------------------------->
-
-							<!--------------------Card para Noche-------------------------->
-							<div class="col-6 ">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>vie. 23</strong> | Noche</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>15°<span class="wi wi-night-clear "></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 20%</h6>
-													<h6><span class="wi wi-strong-wind"></span> NNE 8 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Mínima de 15 C. Vientos del NNE y variable.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>55%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 0 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>salida luna<br><strong> 12:21</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>puesta luna<br><strong> 02:43</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-					</div>	
-			<!--------------------Fin Card para Noche-------------------------->
-
-			<!----------------------Fin Cards Dia 3------------------------->
-			<!----------------------Fila Dia 4 ------------------------>
-		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-		         		<div class="row justify-content-between">
-		         			<div class="col-auto ml-2">
-		         				<p>sáb. 24</p>
-		         			</div>
-		         			<div class="col-sm col-md-auto col-lg-auto ">
-		         				<p><strong>31°</strong>/ 13°</p>
-		         			</div>
-		         			<div class="col-sm col-md-2 col-lg-3 ">
-		         				<p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
-		         			</div>
-			         		<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-			         			<p><span class="wi wi-raindrop"></span> 10%</p>
-			         		</div>
-			         		<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-			         			<p><span class="wi wi-strong-wind"></span> O 9 km/h</p>
-			         		</div>
-			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia float-right" dia="d4">
-				         			<div id="down" class="pointer">
-				         				<img src="./font/arrow-white.png" width="30" height="30" >
-				         			</div>
-				         			<div id="up" class="pointer">
-				         				<img mg src="./font/up-white.png" width="30" height="30" >
-				         			</div>
-				         		</div>
-			         		</div>
-		         		</div>
-		         	</div>
-				
-	<!--------------------Fin Fila Dia 4-------------------------->
-			<!----------------------Cards Dia 4-------------------------->
-		         	<div id="d4" class="d-none">
-						<div class="row justify-content-center">
-							<!--------------------Card para Dia----------------------->
-							<div class=" col-6">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>sáb. 24</strong> | Día</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>31° <span class="wi wi-day-cloudy"></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-													<h6><span class="wi wi-strong-wind"></span> O 9 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Máxima de 31 C. Vientos del O y variable.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>35%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 7 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi   wi-sunrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>amanecer <br><strong> 6:32</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-sunset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p> atardecer <br><strong> 20</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--------------------Fin Card para Dia-------------------------->
-
-							<!--------------------Card para Noche-------------------------->
-							<div class="col-6 ">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>sab. 24</strong> | Noche</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>13°<span class="wi wi-night-clear "></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 10%</h6>
-													<h6><span class="wi wi-strong-wind"></span> ENE 18 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>68%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 0 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>salida luna<br><strong> 10:21</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>puesta luna<br><strong> 00:48</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-					</div>	
-			<!--------------------Fin Card para Noche-------------------------->
-
-			<!----------------------Fin Cards Dia 4------------------------->
-
-			<!----------------------Fila Dia 5 ------------------------>
-		         	<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-		         		<div class="row justify-content-between">
-		         			<div class="col-auto ml-2">
-		         				<p>dom. 25</p>
-		         			</div>
-		         			<div class="col-sm col-md-auto col-lg-auto ">
-		         				<p><strong>23°</strong>/ 10°</p>
-		         			</div>
-		         			<div class="col-sm col-md-2 col-lg-3 ">
-		         				<p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
-		         			</div>
-			         		<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-			         			<p><span class="wi wi-raindrop"></span> 10%</p>
-			         		</div>
-			         		<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-			         			<p><span class="wi wi-strong-wind"></span> OSO 31 km/h</p>
-			         		</div>
-			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia float-right" dia="d5">
-				         			<div id="down" class="pointer">
-				         				<img src="./font/arrow-white.png" width="30" height="30" >
-				         			</div>
-				         			<div id="up" class="pointer">
-				         				<img mg src="./font/up-white.png" width="30" height="30" >
-				         			</div>
-				         		</div>
-			         		</div>
-		         		</div>
-		         	</div>
-				
-	<!--------------------Fin Fila Dia 5-------------------------->
-			<!----------------------Cards Dia 5-------------------------->
-		         	<div id="d5" class="d-none">
-						<div class="row justify-content-center">
-							<!--------------------Card para Dia----------------------->
-							<div class=" col-6">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>dom. 25</strong> | Día</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>23° <span class="wi wi-day-cloudy"></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-													<h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Máxima de 23 C. Vientos del OSO de 25 a 40 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>35%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 7 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi   wi-sunrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>amanecer <br><strong> 7:31</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-sunset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p> atardecer <br><strong> 20:02</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--------------------Fin Card para Dia-------------------------->
-
-							<!--------------------Card para Noche-------------------------->
-							<div class="col-6 ">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>dom. 25</strong> | Noche</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>10°<span class="wi wi-night-clear "></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-													<h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo mayormente despejado. Mínima de 10 C. Vientos del OSO de 25 a 40 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>43%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 0 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>salida luna<br><strong> 14:26</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>puesta luna<br><strong> 04:02</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-					</div>	
-					<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-						<div class="row justify-content-between">
-							<div class="col-auto ml-2">
-								<p>lun. 26</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto ">
-								<p><strong>27°</strong>/ 12°</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 ">
-								<p><span class="wi wi-day-cloudy"></span> Parcialmente Nublado</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-								<p><span class="wi wi-raindrop"></span> 0%</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-								<p><span class="wi wi-strong-wind"></span> OSO 20 km/h </p>
-							</div>
-							<div class="col-md-auto col-lg-auto">
-								<div class="fila-dia float-right" dia="d6">
-									<div id="down" class="pointer">
-										<img src="./font/arrow-white.png" width="30" height="30" >
-									</div>
-									<div id="up" class="pointer">
-										<img mg src="./font/up-white.png" width="30" height="30" >
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--------------------Fin Fila Dia 1-------------------------->
-					
-
-					<!----------------------Cards Dia 1-------------------------->
-					<div id="d6" class="d-none">
-					<div class="row justify-content-center">
-						<!--------------------Card para Dia----------------------->
-						<div class=" col-6">
-							<div class="secondary-bg rounded shadow">
-								<div class="card-header secondary-bg pb-0 border-0">
-									<p><strong>lun. 26</strong> | Día</p>
-								</div>
-								<div class="card secondary-bg border-0 ">
-									<div class="card-body pt-0">
-										<div class="row">
-											<div class="col-6">
-												<h1>27° <span class="wi wi-day-cloudy"></span></h1>
-											</div>
-											<div class="col-6">
-												<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-												<h6><span class="wi wi-strong-wind"></span> OSO 20 km/h</h6>
-											</div>
-										</div>
-										<p class="card-text">Cielo parcialmente cubierto. Máxima de 27 C. Vientos del OSO de 15 a 25 km/h.</p>
-										<div class="d-flex">
-											<div class="card-body main-bg rounded shadow">
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi  wi-humidity"></span>
-															</div>
-															<div class="col-auto">
-																<p>humedad <br><strong>28%</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-day-sunny "></span> 
-															</div>
-															<div class="col-auto">
-																<p>índice UV <br><strong> 7 de 10</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi   wi-sunrise"></span>
-															</div>
-															<div class="col-auto">
-																<p>amanecer <br><strong>06:30</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-sunset"></span> 
-															</div>
-															<div class="col-auto">
-																<p>atardecer <br><strong>20:03</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--------------------Fin Card para Dia-------------------------->
-
-						<!--------------------Card para Noche-------------------------->
-						<div class="col-6 ">
-							<div class="secondary-bg rounded shadow">
-								<div class="card-header secondary-bg pb-0 border-0">
-									<p><strong>lun. 26</strong> | Noche</p>
-								</div>
-								<div class="card secondary-bg border-0 ">
-									<div class="card-body pt-0">
-										<div class="row">
-											<div class="col-6">
-												<h1>12°<span class="wi wi-night-cloudy "></span></h1>
-											</div>
-											<div class="col-6">
-												<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-												<h6><span class="wi wi-strong-wind"></span> OSO 16 km/h</h6>
-											</div>
-										</div>
-										<p class="card-text">Cielo parcialmente cubierto. Mínima de 12 C. Vientos del OSO de 10 a 15 km/h.</p>
-										<div class="d-flex">
-											<div class="card-body main-bg rounded shadow">
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi  wi-humidity"></span>
-															</div>
-															<div class="col-auto">
-																<p>humedad <br><strong>40%</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-day-sunny "></span> 
-															</div>
-															<div class="col-auto">
-																<p>índice UV <br><strong>0 de 10</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi wi-moonrise"></span>
-															</div>
-															<div class="col-auto">
-																<p>salida luna<br><strong>15:26</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-moonset"></span> 
-															</div>
-															<div class="col-auto">
-																<p>puesta luna<br><strong>04:33</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-					<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-		         		<div class="row justify-content-between">
-		         			<div class="col-auto ml-2">
-		         				<p>mar. 27</p>
-		         			</div>
-		         			<div class="col-sm col-md-auto col-lg-auto ">
-		         				<p><strong>21°</strong>/ 8°</p>
-		         			</div>
-		         			<div class="col-sm col-md-2 col-lg-3 ">
-		         				<p><span class="wi wi-day-cloudy"></span> Parcialmente nublado</p>
-		         			</div>
-			         		<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-			         			<p><span class="wi wi-raindrop"></span> 0%</p>
-			         		</div>
-			         		<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-			         			<p><span class="wi wi-strong-wind"></span> OSO 21 km/h </p>
-			         		</div>
-			         		<div class="col-md-auto col-lg-auto">
-			         			<div class="fila-dia float-right" dia="d7">
-				         			<div id="down" class="pointer">
-				         				<img src="./font/arrow-white.png" width="30" height="30" >
-				         			</div>
-				         			<div id="up" class="pointer">
-				         				<img mg src="./font/up-white.png" width="30" height="30" >
-				         			</div>
-				         		</div>
-			         		</div>
-		         		</div>
-		         	</div>
-		         	<!--------------------Fin Fila Dia 1-------------------------->
-		         	
-
-		         	<!----------------------Cards Dia 1-------------------------->
-		         	<div id="d7" class="d-none">
-						<div class="row justify-content-center">
-							<!--------------------Card para Dia----------------------->
-							<div class=" col-6">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>mar. 27</strong> | Día</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>21° <span class="wi wi-day-cloudy"></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-													<h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Máxima de 21 C. Vientos del OSO de 25 a 40 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>32%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p> índice UV <br><strong> 7 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi   wi-sunrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>amanecer <br><strong>06:28</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-sunset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>atardecer <br><strong>20:04</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--------------------Fin Card para Dia-------------------------->
-
-							<!--------------------Card para Noche-------------------------->
-							<div class="col-6 ">
-								<div class="secondary-bg rounded shadow">
-									<div class="card-header secondary-bg pb-0 border-0">
-										<p><strong>mar. 27</strong> | Noche</p>
-									</div>
-									<div class="card secondary-bg border-0 ">
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-6">
-													<h1>8°<span class="wi wi-night-clear "></span></h1>
-												</div>
-												<div class="col-6">
-													<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-													<h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
-												</div>
-											</div>
-											<p class="card-text">Cielo parcialmente cubierto. Mínima de 8 C. Vientos del OSO de 25 a 40 km/h.</p>
-											<div class="d-flex">
-												<div class="card-body main-bg rounded shadow">
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi  wi-humidity"></span>
-																</div>
-																<div class="col-auto">
-																	<p>humedad <br><strong>40%</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-day-sunny "></span> 
-																</div>
-																<div class="col-auto">
-																	<p>índice UV <br><strong>0 de 10</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-6">
-															<div class="row justify-content-center">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonrise"></span>
-																</div>
-																<div class="col-auto">
-																	<p>salida luna<br><strong>16:26</strong></p>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="row">
-																<div class="col-1 my-2">
-																	<span class="wi wi-moonset"></span> 
-																</div>
-																<div class="col-auto">
-																	<p>puesta luna<br><strong>05:00</strong></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-					</div>
-					<div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-						<div class="row justify-content-between">
-							<div class="col-auto ml-2">
-								<p>mie. 28</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto ">
-								<p><strong>22°</strong>/ 8°</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 ">
-								<p><span class="wi wi-day-sunny"></span> Despejado</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-								<p><span class="wi wi-raindrop"></span> 0%</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-								<p><span class="wi wi-strong-wind"></span> OSO 31 km/h </p>
-							</div>
-							<div class="col-md-auto col-lg-auto">
-								<div class="fila-dia float-right" dia="d8">
-									<div id="down" class="pointer">
-										<img src="./font/arrow-white.png" width="30" height="30" >
-									</div>
-									<div id="up" class="pointer">
-										<img mg src="./font/up-white.png" width="30" height="30" >
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--------------------Fin Fila Dia 1-------------------------->
-					
-
-					<!----------------------Cards Dia 1-------------------------->
-					<div id="d8" class="d-none">
-					   <div class="row justify-content-center">
-						   <!--------------------Card para Dia----------------------->
-						   <div class=" col-6">
-							   <div class="secondary-bg rounded shadow">
-								   <div class="card-header secondary-bg pb-0 border-0">
-									   <p><strong>mie. 28</strong> | Día</p>
-								   </div>
-								   <div class="card secondary-bg border-0 ">
-									   <div class="card-body pt-0">
-										   <div class="row">
-											   <div class="col-6">
-												   <h1>22° <span class="wi wi-day-sunny"></span></h1>
-											   </div>
-											   <div class="col-6">
-												   <h6><span class="wi wi-raindrop"> </span> 0%</h6>
-												   <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
-											   </div>
-										   </div>
-										   <p class="card-text">Cielo mayormente despejado. Máxima de 22 C. Vientos del OSO de 25 a 40 km/h.</p>
-										   <div class="d-flex">
-											   <div class="card-body main-bg rounded shadow">
-												   <div class="row">
-													   <div class="col-6">
-														   <div class="row justify-content-center">
-															   <div class="col-1 my-2">
-																   <span class="wi  wi-humidity"></span>
-															   </div>
-															   <div class="col-auto">
-																   <p>humedad <br><strong>31%</strong></p>
-															   </div>
-														   </div>
-													   </div>
-													   <div class="col-6">
-														   <div class="row">
-															   <div class="col-1 my-2">
-																   <span class="wi wi-day-sunny "></span> 
-															   </div>
-															   <div class="col-auto">
-																   <p>índice UV <br><strong> 7 de 10</strong></p>
-															   </div>
-														   </div>
-													   </div>
-												   </div>
-												   <div class="row">
-													   <div class="col-6">
-														   <div class="row justify-content-center">
-															   <div class="col-1 my-2">
-																   <span class="wi   wi-sunrise"></span>
-															   </div>
-															   <div class="col-auto">
-																   <p>amanecer <br><strong>06:27</strong></p>
-															   </div>
-														   </div>
-													   </div>
-													   <div class="col-6">
-														   <div class="row">
-															   <div class="col-1 my-2">
-																   <span class="wi wi-sunset"></span> 
-															   </div>
-															   <div class="col-auto">
-																   <p>atardecer <br><strong>20:05</strong></p>
-															   </div>
-														   </div>
-													   </div>
-												   </div>
-											   </div> 
-										   </div>
-									   </div>
-								   </div>
-							   </div>
-						   </div>
-						   <!--------------------Fin Card para Dia-------------------------->
-
-						   <!--------------------Card para Noche-------------------------->
-						   <div class="col-6 ">
-							   <div class="secondary-bg rounded shadow">
-								   <div class="card-header secondary-bg pb-0 border-0">
-									   <p><strong>mie. 28</strong> | Noche</p>
-								   </div>
-								   <div class="card secondary-bg border-0 ">
-									   <div class="card-body pt-0">
-										   <div class="row">
-											   <div class="col-6">
-												   <h1>8°<span class="wi wi-night-clear "></span></h1>
-											   </div>
-											   <div class="col-6">
-												   <h6><span class="wi wi-raindrop"> </span> 0%</h6>
-												   <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
-											   </div>
-										   </div>
-										   <p class="card-text">Cielo mayormente despejado. Mínima de 8 C. Vientos del SO de 15 a 30 km/h.</p>
-										   <div class="d-flex">
-											   <div class="card-body main-bg rounded shadow">
-												   <div class="row">
-													   <div class="col-6">
-														   <div class="row justify-content-center">
-															   <div class="col-1 my-2">
-																   <span class="wi  wi-humidity"></span>
-															   </div>
-															   <div class="col-auto">
-																   <p>humedad <br><strong>43%</strong></p>
-															   </div>
-														   </div>
-													   </div>
-													   <div class="col-6">
-														   <div class="row">
-															   <div class="col-1 my-2">
-																   <span class="wi wi-day-sunny "></span> 
-															   </div>
-															   <div class="col-auto">
-																   <p>índice UV <br><strong>0 de 10</strong></p>
-															   </div>
-														   </div>
-													   </div>
-												   </div>
-												   <div class="row">
-													   <div class="col-6">
-														   <div class="row justify-content-center">
-															   <div class="col-1 my-2">
-																   <span class="wi wi-moonrise"></span>
-															   </div>
-															   <div class="col-auto">
-																   <p>salida luna<br><strong>17:23</strong></p>
-															   </div>
-														   </div>
-													   </div>
-													   <div class="col-6">
-														   <div class="row">
-															   <div class="col-1 my-2">
-																   <span class="wi wi-moonset"></span> 
-															   </div>
-															   <div class="col-auto">
-																   <p>puesta luna<br><strong>05:25</strong></p>
-															   </div>
-														   </div>
-													   </div>
-												   </div>
-											   </div> 
-										   </div>
-									   </div>
-								   </div>
-							   </div>
-						   </div>
-					   </div>
-				   </div>
-				   <!--  -->
-				   <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-						<div class="row justify-content-between">
-							<div class="col-auto ml-2">
-								<p>jue. 29</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto ">
-								<p><strong>24°</strong>/ 12°</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 ">
-								<p><span class="wi wi-day-sunny"></span> Despejado</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-								<p><span class="wi wi-raindrop"></span> 0%</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-								<p><span class="wi wi-strong-wind"></span> E 11 km/h </p>
-							</div>
-							<div class="col-md-auto col-lg-auto">
-								<div class="fila-dia float-right" dia="d10">
-									<div id="down" class="pointer">
-										<img src="./font/arrow-white.png" width="30" height="30" >
-									</div>
-									<div id="up" class="pointer">
-										<img mg src="./font/up-white.png" width="30" height="30" >
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--------------------Fin Fila Dia 1-------------------------->
-					
-
-					<!----------------------Cards Dia 1-------------------------->
-					<div id="d10" class="d-none">
-					<div class="row justify-content-center">
-						<!--------------------Card para Dia----------------------->
-						<div class=" col-6">
-							<div class="secondary-bg rounded shadow">
-								<div class="card-header secondary-bg pb-0 border-0">
-									<p><strong>jue. 29</strong> | Día</p>
-								</div>
-								<div class="card secondary-bg border-0 ">
-									<div class="card-body pt-0">
-										<div class="row">
-											<div class="col-6">
-												<h1>24° <span class="wi wi-day-sunny"></span></h1>
-											</div>
-											<div class="col-6">
-												<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-												<h6><span class="wi wi-strong-wind"></span> E 11 km/h</h6>
-											</div>
-										</div>
-										<p class="card-text">Cielo mayormente despejado. Máxima de 24 C. Vientos del E de 10 a 15 km/h.</p>
-										<div class="d-flex">
-											<div class="card-body main-bg rounded shadow">
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi  wi-humidity"></span>
-															</div>
-															<div class="col-auto">
-																<p>humedad <br><strong>29%</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-day-sunny "></span> 
-															</div>
-															<div class="col-auto">
-																<p>índice UV <br><strong> 7 de 10</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi   wi-sunrise"></span>
-															</div>
-															<div class="col-auto">
-																<p>amanecer <br><strong>06:26</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-sunset"></span> 
-															</div>
-															<div class="col-auto">
-																<p>atardecer <br><strong>20:06</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--------------------Fin Card para Dia-------------------------->
-
-						<!--------------------Card para Noche-------------------------->
-						<div class="col-6 ">
-							<div class="secondary-bg rounded shadow">
-								<div class="card-header secondary-bg pb-0 border-0">
-									<p><strong>jue. 29</strong> | Noche</p>
-								</div>
-								<div class="card secondary-bg border-0 ">
-									<div class="card-body pt-0">
-										<div class="row">
-											<div class="col-6">
-												<h1>12°<span class="wi wi-night-cloudy "></span></h1>
-											</div>
-											<div class="col-6">
-												<h6><span class="wi wi-raindrop"> </span> 0%</h6>
-												<h6><span class="wi wi-strong-wind"></span> ENE 12 km/h</h6>
-											</div>
-										</div>
-										<p class="card-text">Cielo mayormente despejado. Mínima de 12 C. Vientos del ENE de 10 a 15 km/h.</p>
-										<div class="d-flex">
-											<div class="card-body main-bg rounded shadow">
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi  wi-humidity"></span>
-															</div>
-															<div class="col-auto">
-																<p>humedad <br><strong>39%</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-day-sunny "></span> 
-															</div>
-															<div class="col-auto">
-																<p>índice UV <br><strong>0 de 10</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi wi-moonrise"></span>
-															</div>
-															<div class="col-auto">
-																<p>salida luna<br><strong>18:21</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-moonset"></span> 
-															</div>
-															<div class="col-auto">
-																<p>puesta luna<br><strong>05:49</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				   <!--  -->
-				   <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
-						<div class="row justify-content-between">
-							<div class="col-auto ml-2">
-								<p>vie. 30</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto ">
-								<p><strong>26°</strong>/ 12°</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 ">
-								<p><span class="wi wi-day-cloudy"></span> Parcialmente Nublado</p>
-							</div>
-							<div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
-								<p><span class="wi wi-raindrop"></span> 10%</p>
-							</div>
-							<div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
-								<p><span class="wi wi-strong-wind"></span> ENE 16 km/h </p>
-							</div>
-							<div class="col-md-auto col-lg-auto">
-								<div class="fila-dia float-right" dia="d11">
-									<div id="down" class="pointer">
-										<img src="./font/arrow-white.png" width="30" height="30" >
-									</div>
-									<div id="up" class="pointer">
-										<img mg src="./font/up-white.png" width="30" height="30" >
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--------------------Fin Fila Dia 1-------------------------->
-					
-
-					<!----------------------Cards Dia 1-------------------------->
-					<div id="d11" class="d-none">
-					<div class="row justify-content-center">
-						<!--------------------Card para Dia----------------------->
-						<div class=" col-6">
-							<div class="secondary-bg rounded shadow">
-								<div class="card-header secondary-bg pb-0 border-0">
-									<p><strong>vie. 30</strong> | Día</p>
-								</div>
-								<div class="card secondary-bg border-0 ">
-									<div class="card-body pt-0">
-										<div class="row">
-											<div class="col-6">
-												<h1>26° <span class="wi wi-day-cloudy"></span></h1>
-											</div>
-											<div class="col-6">
-												<h6><span class="wi wi-raindrop"> </span> 10%</h6>
-												<h6><span class="wi wi-strong-wind"></span> ENE 16 km/h</h6>
-											</div>
-										</div>
-										<p class="card-text">Cielo parcialmente cubierto. Máxima de 26 C. Vientos del ENE de 10 a 15 km/h.</p>
-										<div class="d-flex">
-											<div class="card-body main-bg rounded shadow">
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi  wi-humidity"></span>
-															</div>
-															<div class="col-auto">
-																<p>humedad <br><strong>36%</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-day-sunny "></span> 
-															</div>
-															<div class="col-auto">
-																<p>índice UV <br><strong> 7 de 10</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi   wi-sunrise"></span>
-															</div>
-															<div class="col-auto">
-																<p>amanecer <br><strong>06:25</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-sunset"></span> 
-															</div>
-															<div class="col-auto">
-																<p>atardecer <br><strong>20:07</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--------------------Fin Card para Dia-------------------------->
-
-						<!--------------------Card para Noche-------------------------->
-						<div class="col-6 ">
-							<div class="secondary-bg rounded shadow">
-								<div class="card-header secondary-bg pb-0 border-0">
-									<p><strong>vie. 30</strong> | Noche</p>
-								</div>
-								<div class="card secondary-bg border-0 ">
-									<div class="card-body pt-0">
-										<div class="row">
-											<div class="col-6">
-												<h1>12°<span class="wi wi-night-cloudy "></span></h1>
-											</div>
-											<div class="col-6">
-												<h6><span class="wi wi-raindrop"> </span> 20%</h6>
-												<h6><span class="wi wi-strong-wind"></span> ENE 13 km/h</h6>
-											</div>
-										</div>
-										<p class="card-text">Cielo parcialmente cubierto. Mínima de 12 C. Vientos del ENE de 10 a 15 km/h.</p>
-										<div class="d-flex">
-											<div class="card-body main-bg rounded shadow">
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi  wi-humidity"></span>
-															</div>
-															<div class="col-auto">
-																<p>humedad <br><strong>47%</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-day-sunny "></span> 
-															</div>
-															<div class="col-auto">
-																<p>índice UV <br><strong>0 de 10</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-6">
-														<div class="row justify-content-center">
-															<div class="col-1 my-2">
-																<span class="wi wi-moonrise"></span>
-															</div>
-															<div class="col-auto">
-																<p>salida luna<br><strong>19:18</strong></p>
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-														<div class="row">
-															<div class="col-1 my-2">
-																<span class="wi wi-moonset"></span> 
-															</div>
-															<div class="col-auto">
-																<p>puesta luna<br><strong>06:13</strong></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="./scripts/header.js"></script>
-	<script src="./scripts/dias-info.js"></script>
-</body>
+         </nav>
+      </header>
+      <!---------------------Fin Menu--------------------->
+      <section class="tiempo-dias">
+         <div class="container-fluid w-75 mt-3 text-white">
+            <h1 class="bold">Neuquén, Argentina</h1>
+            <h4>Tiempo para 10 dias</h4>
+            <!----------------Filas de dias---------------------- -->
+            <div class="center mt-3">
+               <div class="container">
+                  <div class="row justify-content-lg-center ">
+                     <!-------------------Fila Dia 1 ------------------------>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>mie. 21</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>22°</strong>/ 9°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-cloudy"></span> Mayormente nublado</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 10%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> OSO 26 km/h </p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d1">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 1-------------------------->
+                     <!----------------------Cards Dia 1-------------------------->
+                     <div id="d1" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mié. 21</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>22° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 27 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 22 C. Vientos del ENE de 15 a 30 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>39%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong> 6:36</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> atardecer <br><strong> 7:57</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mié. 21</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>9°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 10%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 18 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>68%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong> 10:21</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong> 00:48</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Card para Noche-------------------------->
+                     <!----------------------Fin Cards Dia 1------------------------->
+                     <!----------------------Fila Dia 2 ------------------------>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>jue. 22</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>27°</strong>/ 12°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 10%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> ENE 11 km/h</p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d2"">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 2-------------------------->
+                     <!----------------------Cards Dia 2-------------------------->
+                     <div id="d2" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>jue. 22</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>27° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 10%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 11 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>39%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong> 6:36</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> atardecer <br><strong> 7:57</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mié. 21</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>9°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 10%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 18 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>68%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong> 10:21</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong> 00:48</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Card para Noche-------------------------->
+                     <!----------------------Fin Cards Dia 2------------------------->
+                     <!----------------------Fila Dia 3 ------------------------>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>vie. 23</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>32°</strong>/ 15°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 10%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> NNE 7 km/h</p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d3">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 3-------------------------->
+                     <!----------------------Cards Dia 3-------------------------->
+                     <div id="d3" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>vie. 23</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>32° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 10%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> NNE 7 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 32 C. Vientos del NNE y variable.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>57%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong> 6:33</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> atardecer <br><strong> 7:59</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>vie. 23</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>15°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 20%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> NNE 8 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Mínima de 15 C. Vientos del NNE y variable.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>55%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong> 12:21</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong> 02:43</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Card para Noche-------------------------->
+                     <!----------------------Fin Cards Dia 3------------------------->
+                     <!----------------------Fila Dia 4 ------------------------>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>sáb. 24</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>31°</strong>/ 13°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 10%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> O 9 km/h</p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d4">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 4-------------------------->
+                     <!----------------------Cards Dia 4-------------------------->
+                     <div id="d4" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>sáb. 24</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>31° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> O 9 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 31 C. Vientos del O y variable.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>35%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong> 6:32</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> atardecer <br><strong> 20</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>sab. 24</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>13°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 10%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 18 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 9 C. Vientos del E de 15 a 25 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>68%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong> 10:21</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong> 00:48</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Card para Noche-------------------------->
+                     <!----------------------Fin Cards Dia 4------------------------->
+                     <!----------------------Fila Dia 5 ------------------------>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>dom. 25</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>23°</strong>/ 10°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-sunny-overcast"></span> Parcialmente nublado </p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 10%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> OSO 31 km/h</p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d5">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 5-------------------------->
+                     <!----------------------Cards Dia 5-------------------------->
+                     <div id="d5" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>dom. 25</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>23° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 23 C. Vientos del OSO de 25 a 40 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>35%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong> 7:31</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> atardecer <br><strong> 20:02</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>dom. 25</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>10°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 10 C. Vientos del OSO de 25 a 40 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>43%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong> 14:26</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong> 04:02</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>lun. 26</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>27°</strong>/ 12°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-cloudy"></span> Parcialmente Nublado</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 0%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> OSO 20 km/h </p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d6">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 1-------------------------->
+                     <!----------------------Cards Dia 1-------------------------->
+                     <div id="d6" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>lun. 26</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>27° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 20 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 27 C. Vientos del OSO de 15 a 25 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>28%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong>06:30</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>atardecer <br><strong>20:03</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>lun. 26</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>12°<span class="wi wi-night-cloudy "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 16 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Mínima de 12 C. Vientos del OSO de 10 a 15 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>40%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong>0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong>15:26</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong>04:33</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>mar. 27</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>21°</strong>/ 8°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-cloudy"></span> Parcialmente nublado</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 0%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> OSO 21 km/h </p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d7">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 1-------------------------->
+                     <!----------------------Cards Dia 1-------------------------->
+                     <div id="d7" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mar. 27</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>21° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 21 C. Vientos del OSO de 25 a 40 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>32%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p> índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong>06:28</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>atardecer <br><strong>20:04</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mar. 27</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>8°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Mínima de 8 C. Vientos del OSO de 25 a 40 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>40%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong>0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong>16:26</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong>05:00</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>mie. 28</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>22°</strong>/ 8°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-sunny"></span> Despejado</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 0%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> OSO 31 km/h </p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d8">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 1-------------------------->
+                     <!----------------------Cards Dia 1-------------------------->
+                     <div id="d8" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mie. 28</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>22° <span class="wi wi-day-sunny"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Máxima de 22 C. Vientos del OSO de 25 a 40 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>31%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong>06:27</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>atardecer <br><strong>20:05</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>mie. 28</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>8°<span class="wi wi-night-clear "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> OSO 31 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 8 C. Vientos del SO de 15 a 30 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>43%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong>0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong>17:23</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong>05:25</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--  -->
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>jue. 29</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>24°</strong>/ 12°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-sunny"></span> Despejado</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 0%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> E 11 km/h </p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d10">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 1-------------------------->
+                     <!----------------------Cards Dia 1-------------------------->
+                     <div id="d10" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>jue. 29</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>24° <span class="wi wi-day-sunny"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> E 11 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Máxima de 24 C. Vientos del E de 10 a 15 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>29%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong>06:26</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>atardecer <br><strong>20:06</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>jue. 29</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>12°<span class="wi wi-night-cloudy "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 0%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 12 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo mayormente despejado. Mínima de 12 C. Vientos del ENE de 10 a 15 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>39%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong>0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong>18:21</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong>05:49</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--  -->
+                     <div class="container secondary-bg p-3 my-2 text-white rounded shadow">
+                        <div class="row justify-content-between">
+                           <div class="col-auto ml-2">
+                              <p>vie. 30</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto ">
+                              <p><strong>26°</strong>/ 12°</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 ">
+                              <p><span class="wi wi-day-cloudy"></span> Parcialmente Nublado</p>
+                           </div>
+                           <div class="col-sm col-md-auto col-lg-auto d-sm-none d-md-block">
+                              <p><span class="wi wi-raindrop"></span> 10%</p>
+                           </div>
+                           <div class="col-sm col-md-2 col-lg-3 d-sm-none d-md-block">
+                              <p><span class="wi wi-strong-wind"></span> ENE 16 km/h </p>
+                           </div>
+                           <div class="col-md-auto col-lg-auto">
+                              <div class="fila-dia float-right" dia="d11">
+                                 <div id="down" class="pointer">
+                                    <img src="./font/arrow-white.png" width="30" height="30" alt="Arrow pointing down">
+                                 </div>
+                                 <div id="up" class="pointer">
+                                    <img mg src="./font/up-white.png" width="30" height="30" alt="Arrow pointing up">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--------------------Fin Fila Dia 1-------------------------->
+                     <!----------------------Cards Dia 1-------------------------->
+                     <div id="d11" class="d-none">
+                        <div class="row justify-content-center">
+                           <!--------------------Card para Dia----------------------->
+                           <div class=" col-6">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>vie. 30</strong> | Día</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>26° <span class="wi wi-day-cloudy"></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 10%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 16 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Máxima de 26 C. Vientos del ENE de 10 a 15 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>36%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong> 7 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi   wi-sunrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>amanecer <br><strong>06:25</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-sunset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>atardecer <br><strong>20:07</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--------------------Fin Card para Dia-------------------------->
+                           <!--------------------Card para Noche-------------------------->
+                           <div class="col-6 ">
+                              <div class="secondary-bg rounded shadow">
+                                 <div class="card-header secondary-bg pb-0 border-0">
+                                    <p><strong>vie. 30</strong> | Noche</p>
+                                 </div>
+                                 <div class="card secondary-bg border-0 ">
+                                    <div class="card-body pt-0">
+                                       <div class="row">
+                                          <div class="col-6">
+                                             <h1>12°<span class="wi wi-night-cloudy "></span></h1>
+                                          </div>
+                                          <div class="col-6">
+                                             <h6><span class="wi wi-raindrop"> </span> 20%</h6>
+                                             <h6><span class="wi wi-strong-wind"></span> ENE 13 km/h</h6>
+                                          </div>
+                                       </div>
+                                       <p class="card-text">Cielo parcialmente cubierto. Mínima de 12 C. Vientos del ENE de 10 a 15 km/h.</p>
+                                       <div class="d-flex">
+                                          <div class="card-body main-bg rounded shadow">
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi  wi-humidity"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>humedad <br><strong>47%</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-day-sunny "></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>índice UV <br><strong>0 de 10</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-6">
+                                                   <div class="row justify-content-center">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonrise"></span>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>salida luna<br><strong>19:18</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   <div class="row">
+                                                      <div class="col-1 my-2">
+                                                         <span class="wi wi-moonset"></span> 
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <p>puesta luna<br><strong>06:13</strong></p>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script src="./scripts/header.js"></script>
+      <script src="./scripts/dias-info.js"></script>
+   </body>
 </html>

@@ -1,117 +1,120 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clima por hora en Neuquen Capital">
-    <meta http-equiv="Content-Language" content="es">
-    <meta name=”distribution” content=”global”/>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles/custom.css">
-    <link rel="stylesheet" href="./styles/weather-icons.min.css">
-    <title>TPO2</title>
-</head>
-<body class="main-bg">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light main-bg ">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Clima por hora en Neuquen Capital">
+      <meta http-equiv="Content-Language" content="es">
+      <meta name=”distribution” content=”global”/>
+      <link rel="stylesheet" href="./styles/bootstrap.min.css">
+      <link rel="stylesheet" href="./styles/custom.css">
+      <link rel="stylesheet" href="./styles/weather-icons.min.css">
+      <title>TPO2</title>
+   </head>
+   <body class="main-bg">
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-light main-bg ">
             <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <!-- imagen logo y texto-->
             <a class="navbar-brand pr-5" href="./">
-                <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo de la pagina">
+            <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo de la pagina">
             </a>
             <div class="collapse navbar-collapse" id ="navbarTogglerDemo01">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="pr-5 ml-2 text-white nav-link" href="index.html">Hoy</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="pr-5 ml-2 text-white nav-link bold" href="#">Por Hora</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="pr-5 ml-2 text-white nav-link" href="dias.html">10 dias</a>
-                    </li>
-                </ul>
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="pr-5 ml-2 text-white nav-link" href="index.html">Hoy</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="pr-5 ml-2 text-white nav-link bold" href="#">Por Hora</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="pr-5 ml-2 text-white nav-link" href="dias.html">10 dias</a>
+                  </li>
+               </ul>
             </div>
-        </nav>
-    </header>
-    <div class="container text-white px-0">
-      <h1 class="bold">Neuquén, Argentina</h1>
-      <h4>Tiempo por hora</h4>
-    </div>
-    <div class="container mt-4 secondary-bg p-4 text-white rounded shadow">
-        <table class="table text-white">
-            <thead class="custom-thead">
-              <tr>
-                <th scope="col" class="text-center">Hora</th>
-                <th scope="col" class="text-center">Temperatura</th>
-                <th scope="col" class="text-center">Sensacion Termica</th>
-                <th scope="col" class="text-center">Descripcion</th>
-                <th scope="col" class="text-center">Viento</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" class="text-center">2:00</th>
-                <td class="text-center">12° C</td>
-                <td class="text-center">12° C</td>
-                <td><i class="wi wi-night-clear"></i>&nbsp;Despejado</td>
-                <td>Noreste<br>27-49 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">5:00</th>
-                <td class="text-center">10° C</td>
-                <td class="text-center">9° C</td>
-                <td><i class="wi wi-night-clear"></i>&nbsp;Despejado</td>
-                <td>Noreste<br>26-54 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">8:00</th>
-                <td class="text-center">12° C</td>
-                <td class="text-center">12° C</td>
-                <td><i class="wi wi-day-sunny"></i>&nbsp;Despejado</td>
-                <td>Noreste<br>11-25 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">11:00</th>
-                <td class="text-center">19° C</td>
-                <td class="text-center">19° C</td>
-                <td><i class="wi wi-day-cloudy"></i>&nbsp;Intervalos Nubosos</td>
-                <td>Noreste<br>11-25 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">14:00</th>
-                <td class="text-center">25° C</td>
-                <td class="text-center">25° C</td>
-                <td><i class="wi wi-day-cloudy"></i>&nbsp;Intervalos Nubosos</td>
-                <td>Suroeste<br>30-63 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">17:00</th>
-                <td class="text-center">26° C</td>
-                <td class="text-center">26° C</td>
-                <td><i class="wi wi-day-cloudy"></i>&nbsp;Intervalos Nubosos</td>
-                <td>Suroeste<br>24-67 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">20:00</th>
-                <td class="text-center">23° C</td>
-                <td class="text-center">25° C</td>
-                <td><i class="wi wi-night-clear"></i>&nbsp;Cielos Nubosos</td>
-                <td>Suroeste<br>24-67 km/h</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">23:00</th>
-                <td class="text-center">19° C</td>
-                <td class="text-center">19° C</td>
-                <td><i class="wi wi-night-alt-cloudy"></i>&nbsp;Cielos Nubosos</td>
-                <td>Suroeste<br>24-67 km/h</td>
-              </tr>
-            </tbody>
-        </table>
-    </div>
-    <script src="./scripts/header.js"></script>
-</body>
-
+         </nav>
+      </header>
+      <section class="tiempo-hora">
+         <div class="container text-white px-0">
+            <h1 class="bold">Neuquén, Argentina</h1>
+            <h4>Tiempo por hora</h4>
+         </div>
+         <div class="container mt-4 secondary-bg p-4 text-white rounded shadow">
+            <table class="table text-white">
+               <thead class="custom-thead">
+                  <tr>
+                     <th scope="col" class="text-center">Hora</th>
+                     <th scope="col" class="text-center">Temperatura</th>
+                     <th scope="col" class="text-center">Sensacion Termica</th>
+                     <th scope="col" class="text-center">Descripcion</th>
+                     <th scope="col" class="text-center">Viento</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th scope="row" class="text-center">2:00</th>
+                     <td class="text-center">12° C</td>
+                     <td class="text-center">12° C</td>
+                     <td><i class="wi wi-night-clear"></i>&nbsp;Despejado</td>
+                     <td>Noreste<br>27-49 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">5:00</th>
+                     <td class="text-center">10° C</td>
+                     <td class="text-center">9° C</td>
+                     <td><i class="wi wi-night-clear"></i>&nbsp;Despejado</td>
+                     <td>Noreste<br>26-54 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">8:00</th>
+                     <td class="text-center">12° C</td>
+                     <td class="text-center">12° C</td>
+                     <td><i class="wi wi-day-sunny"></i>&nbsp;Despejado</td>
+                     <td>Noreste<br>11-25 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">11:00</th>
+                     <td class="text-center">19° C</td>
+                     <td class="text-center">19° C</td>
+                     <td><i class="wi wi-day-cloudy"></i>&nbsp;Intervalos Nubosos</td>
+                     <td>Noreste<br>11-25 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">14:00</th>
+                     <td class="text-center">25° C</td>
+                     <td class="text-center">25° C</td>
+                     <td><i class="wi wi-day-cloudy"></i>&nbsp;Intervalos Nubosos</td>
+                     <td>Suroeste<br>30-63 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">17:00</th>
+                     <td class="text-center">26° C</td>
+                     <td class="text-center">26° C</td>
+                     <td><i class="wi wi-day-cloudy"></i>&nbsp;Intervalos Nubosos</td>
+                     <td>Suroeste<br>24-67 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">20:00</th>
+                     <td class="text-center">23° C</td>
+                     <td class="text-center">25° C</td>
+                     <td><i class="wi wi-night-clear"></i>&nbsp;Cielos Nubosos</td>
+                     <td>Suroeste<br>24-67 km/h</td>
+                  </tr>
+                  <tr>
+                     <th scope="row" class="text-center">23:00</th>
+                     <td class="text-center">19° C</td>
+                     <td class="text-center">19° C</td>
+                     <td><i class="wi wi-night-alt-cloudy"></i>&nbsp;Cielos Nubosos</td>
+                     <td>Suroeste<br>24-67 km/h</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+      <script src="./scripts/header.js"></script>
+   </body>
 </html>

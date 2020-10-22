@@ -1,169 +1,171 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clima en Neuquen Capital">
-    <meta http-equiv="Content-Language" content="es">
-    <meta name=”distribution” content=”global”/>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles/custom.css">
-    <link rel="stylesheet" href="./styles/weather-icons.min.css">
-    <title>TPO2</title>
-</head>
-<body class="main-bg">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Clima en Neuquen Capital">
+      <meta http-equiv="Content-Language" content="es">
+      <meta name=”distribution” content=”global”/>
+      <link rel="stylesheet" href="./styles/bootstrap.min.css">
+      <link rel="stylesheet" href="./styles/custom.css">
+      <link rel="stylesheet" href="./styles/weather-icons.min.css">
+      <title>TPO2</title>
+   </head>
+   <body class="main-bg">
       <header>
-        <nav class="navbar navbar-expand-lg navbar-light main-bg ">
+         <nav class="navbar navbar-expand-lg navbar-light main-bg ">
             <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <!-- imagen logo y texto-->
             <a class="navbar-brand pr-5" href="./">
-                <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo de la pagina">
+            <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo de la pagina">
             </a>
             <div class="collapse navbar-collapse" id ="navbarTogglerDemo01">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item pr-5 ml-2 text-white nav-link bold" href="#">Hoy</a>
-                    <a class="nav-item pr-5 ml-2 text-white nav-link" href="hora.html">Por Hora</a>
-                    <a class="nav-item pr-5 ml-2 text-white nav-link" href="dias.html">10 dias</a>
-                </div>
+               <div class="navbar-nav ml-auto">
+                  <a class="nav-item pr-5 ml-2 text-white nav-link bold" href="#">Hoy</a>
+                  <a class="nav-item pr-5 ml-2 text-white nav-link" href="hora.html">Por Hora</a>
+                  <a class="nav-item pr-5 ml-2 text-white nav-link" href="dias.html">10 dias</a>
+               </div>
             </div>
-        </nav>
-    </header>
-    <div class="container-fluid w-75 mt-5 text-white">
-        <h1 class="bold">Neuquén, Argentina</h1>
-        <h4>Jueves 22 de Octubre</h4>
-        <div class="mt-3 secondary-bg p-4 text-white rounded shadow">
-            <div class="row">
-                <div class="col-md-12 col-lg-6 secondary-bg text-center border-right">
-                    <div class="d-flex justify-content-evenly">
+         </nav>
+      </header>
+      <section class="tiempo-hoy">
+         <div class="container-fluid w-75 mt-5 text-white">
+            <h1 class="bold">Neuquén, Argentina</h1>
+            <h4>Jueves 22 de Octubre</h4>
+            <div class="mt-3 secondary-bg p-4 text-white rounded shadow">
+               <div class="row">
+                  <div class="col-md-12 col-lg-6 secondary-bg text-center border-right">
+                     <div class="d-flex justify-content-evenly">
                         <span class="huge">
-                            <i class="wi wi-day-cloudy"></i>
+                        <i class="wi wi-day-cloudy"></i>
                         </span>
                         <div class="d-flex flex-column justify-content-center">
-                            <h1 class="text-center big">
-                                21.0 °C
-                            </h1>
-                            <h4>
-                                Parcialmente Nublado
-                            </h4>
+                           <h1 class="text-center big">
+                              21.0 °C
+                           </h1>
+                           <h4>
+                              Parcialmente Nublado
+                           </h4>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
-                    <div class="row">
+                     </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                     <div class="row">
                         <div class="col-4 my-4 text-center">
-                            <h5 class="bold">
-                                23.0 °C
-                            </h5>
-                            <h6>
-                                Máxima
-                            </h6>
-                        </div>
-                        <div class="col-4 my-4 text-center">
-                            <h5 class="bold">
-                                16kmh
-                            </h5>
-                            <h6>
-                                Viento
-                            </h6>
+                           <h5 class="bold">
+                              23.0 °C
+                           </h5>
+                           <h6>
+                              Máxima
+                           </h6>
                         </div>
                         <div class="col-4 my-4 text-center">
-                            <h5 class="bold">
-                                06:37
-                            </h5>
-                            <h6>
-                                Salida Sol
-                            </h6>
+                           <h5 class="bold">
+                              16kmh
+                           </h5>
+                           <h6>
+                              Viento
+                           </h6>
                         </div>
                         <div class="col-4 my-4 text-center">
-                            <h5 class="bold">
-                                10.0 °C
-                            </h5>
-                            <h6>
-                                Mínima
-                            </h6>
+                           <h5 class="bold">
+                              06:37
+                           </h5>
+                           <h6>
+                              Salida Sol
+                           </h6>
                         </div>
                         <div class="col-4 my-4 text-center">
-                            <h5 class="bold">
-                                0%
-                            </h5>
-                            <h6>
-                                Prob. Lluvia
-                            </h6>
+                           <h5 class="bold">
+                              10.0 °C
+                           </h5>
+                           <h6>
+                              Mínima
+                           </h6>
                         </div>
                         <div class="col-4 my-4 text-center">
-                            <h5 class="bold">
-                                19:55
-                            </h5>
-                            <h6>
-                                Puesta Sol
-                            </h6>
+                           <h5 class="bold">
+                              0%
+                           </h5>
+                           <h6>
+                              Prob. Lluvia
+                           </h6>
                         </div>
-                    </div>
-                </div>
+                        <div class="col-4 my-4 text-center">
+                           <h5 class="bold">
+                              19:55
+                           </h5>
+                           <h6>
+                              Puesta Sol
+                           </h6>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <h3 class="mt-5">Clima Hoy</h3>
-        <div class="row">
-            <div class="col-md-4 col-lg-2">
-                <div class="secondary-bg rounded shadow py-4 text-center my-2">
-                    <h3>3am</h3>
-                    <span class="big">
-                        <i class="wi wi-night-alt-cloudy"></i>
-                    </span>
-                    <h3>14°</h3>
-                </div>
+            <h3 class="mt-5">Clima Hoy</h3>
+            <div class="row">
+               <div class="col-md-4 col-lg-2">
+                  <div class="secondary-bg rounded shadow py-4 text-center my-2">
+                     <h3>3am</h3>
+                     <span class="big">
+                     <i class="wi wi-night-alt-cloudy"></i>
+                     </span>
+                     <h3>14°</h3>
+                  </div>
+               </div>
+               <div class="col-md-4 col-lg-2">
+                  <div class="secondary-bg rounded shadow py-4 text-center my-2">
+                     <h3>6am</h3>
+                     <span class="big">
+                     <i class="wi wi-day-cloudy"></i>
+                     </span>
+                     <h3>16°</h3>
+                  </div>
+               </div>
+               <div class="col-md-4 col-lg-2">
+                  <div class="secondary-bg rounded shadow py-4 text-center my-2">
+                     <h3>9am</h3>
+                     <span class="big">
+                     <i class="wi wi-day-cloudy"></i>
+                     </span>
+                     <h3>17°</h3>
+                  </div>
+               </div>
+               <div class="col-md-4 col-lg-2">
+                  <div class="secondary-bg rounded shadow py-4 text-center my-2">
+                     <h3>12pm</h3>
+                     <span class="big">
+                     <i class="wi wi-day-cloudy"></i>
+                     </span>
+                     <h3>19°</h3>
+                  </div>
+               </div>
+               <div class="col-md-4 col-lg-2">
+                  <div class="secondary-bg rounded shadow py-4 text-center my-2">
+                     <h3>3pm</h3>
+                     <span class="big">
+                     <i class="wi wi-day-sunny"></i>
+                     </span>
+                     <h3>21°</h3>
+                  </div>
+               </div>
+               <div class="col-md-4 col-lg-2">
+                  <div class="secondary-bg rounded shadow py-4 text-center my-2">
+                     <h3>6pm</h3>
+                     <span class="big">
+                     <i class="wi wi-day-sunny"></i>
+                     </span>
+                     <h3>20°</h3>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="secondary-bg rounded shadow py-4 text-center my-2">
-                    <h3>6am</h3>
-                    <span class="big">
-                        <i class="wi wi-day-cloudy"></i>
-                    </span>
-                    <h3>16°</h3>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="secondary-bg rounded shadow py-4 text-center my-2">
-                    <h3>9am</h3>
-                    <span class="big">
-                        <i class="wi wi-day-cloudy"></i>
-                    </span>
-                    <h3>17°</h3>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="secondary-bg rounded shadow py-4 text-center my-2">
-                    <h3>12pm</h3>
-                    <span class="big">
-                        <i class="wi wi-day-cloudy"></i>
-                    </span>
-                    <h3>19°</h3>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="secondary-bg rounded shadow py-4 text-center my-2">
-                    <h3>3pm</h3>
-                    <span class="big">
-                        <i class="wi wi-day-sunny"></i>
-                    </span>
-                    <h3>21°</h3>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="secondary-bg rounded shadow py-4 text-center my-2">
-                    <h3>6pm</h3>
-                    <span class="big">
-                        <i class="wi wi-day-sunny"></i>
-                    </span>
-                    <h3>20°</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <script src="./scripts/header.js"></script>
-</body>
+         </div>
+      </section>
+      <script src="./scripts/header.js"></script>
+   </body>
 </html>
